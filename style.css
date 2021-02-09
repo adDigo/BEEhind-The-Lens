@@ -5,6 +5,11 @@
     list-style: none;
     text-decoration: none;
 }
+body{
+    position: relative;
+    padding-bottom: 6rem;
+    min-height:100%
+    }
 
 .header{
     width: 100%;
@@ -13,7 +18,7 @@
     background-color:none; 
 }
 
-img{
+#header-logo{
     width: 105px;
     height: auto;
     padding-top: 10px;

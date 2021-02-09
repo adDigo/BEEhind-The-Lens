@@ -9,6 +9,12 @@
           box-sizing: border-box;
       }
 
+      body{
+        position: relative;
+        padding-bottom: 6rem;
+        min-height:100%
+        }   
+        
       .slideshow-container{
           max-width: 1000px;
           position: relative;
@@ -19,26 +25,28 @@
       .prev, .next{
           cursor: pointer;
           position: absolute;
-          top: 85%;
+          top: 50%;
           width: auto;
           padding: 16px;
           margin-top:-22px;
-          color: white;
+          color: #dac779;
           font-weight: bold;
           font-size: 18px;
           border-radius: 100px;
           user-select: none; 
-          transition: 0.5s ease;
-      }
+          transition: 0.5s ease ;
+             }
 
       .next{
-          right: 0px;
-          border-radius: 70px;
+          right: 120px;
+      }
+      .prev{
+          left: 120px;
       }
 
       /*background color of arrows*/
       .prev:hover, .next:hover{
-        background-color: #FFDF00;
+        background-color: #f5df86;
       }
 
       .dot{
@@ -54,7 +62,15 @@
       }
 
       .active{
-          background-color: #FFDF00;
+          background-color: #f5df86;
+      }
+
+      .slide-pics{
+          border: 5px solid #f5df86;
+          width: 70%;
+          display: block;
+          margin-right: auto;
+          margin-left: auto;
       }
 
       </style>
@@ -66,15 +82,15 @@
         <div class="slideshow-container">
             <!--img1-->
             <div class="dynamic-slides">
-                <img src="pics/purple-baby-basket.png" alt = "baby in basket" style ="width:100%" class="slide-pics">
+                <img src="pics/purple-baby-basket.png" alt = "baby in basket"  class="slide-pics">
             </div>
             <!--img2-->
             <div class="dynamic-slides">
-                <img src="pics/family2.png" alt = "family" style ="width: 100%" class="slide-pics">
+                <img src="pics/family2.png" alt = "family"  class="slide-pics">
             </div>
             <!--img3-->
             <div class="dynamic-slides">
-                <img src="pics/siblings-bee-strong.png" alt = "siblings" style ="width: 100%" class="slide-pics">
+                <img src="pics/siblings-bee-strong.png" alt = "siblings" class="slide-pics">
             </div>
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -88,14 +104,16 @@
         </div>
 
         <script>
+           
+
             var slideIndex = 0;
             showSlides();
             var slides,dots,timer; /* timer vars */
 
             function showSlides(){
                 var i;
-                var slides = document.getElementsByClassName("dynamic-slides");
-                var dots = document.getElementsByClassName("dot");
+                slides = document.getElementsByClassName("dynamic-slides");
+                dots = document.getElementsByClassName("dot");
 
                 for (i = 0; i <slides.length; i++){
                     /*each slide will not take up space on screen when displayed */
