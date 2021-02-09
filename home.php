@@ -92,6 +92,17 @@
             <div class="dynamic-slides">
                 <img src="pics/siblings-bee-strong.png" alt = "siblings" class="slide-pics">
             </div>
+            <!--img4-->
+            <div class="dynamic-slides">
+                <img src="pics/baby-cake-smash1.png" alt = "cake smash" class="slide-pics">
+            </div>
+              <!--img5-->
+              <div class="dynamic-slides">
+                <img src="pics/maternity.png" alt = "maternity" class="slide-pics">
+            </div>
+
+
+
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -101,6 +112,8 @@
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
         </div>
 
         <script>
